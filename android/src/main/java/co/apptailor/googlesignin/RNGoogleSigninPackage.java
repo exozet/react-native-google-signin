@@ -15,19 +15,16 @@ import java.util.List;
 
 public class RNGoogleSigninPackage implements ReactPackage {
 
-    @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
         List<NativeModule> modules = new ArrayList<>();
         modules.add(new RNGoogleSigninModule(reactContext));
         return modules;
     }
 
-    @Override
     public List<Class<? extends JavaScriptModule>> createJSModules() {
         return Collections.emptyList();
     }
 
-    @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
         return Arrays.<ViewManager>asList(
                 new RNGoogleSigninButtonViewManager()
